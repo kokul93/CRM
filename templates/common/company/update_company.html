@@ -1,0 +1,13 @@
+{% extends 'E:/Python/Django/Rajan_mama/Project_2/mysite/templates/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <form method="post">
+    {% csrf_token %}
+    <table>{{form.as_table}}</table>
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+
+  <a href="{% url 'company' %}">Cancel</a>
+{% endblock %}

@@ -1,0 +1,4 @@
+Django
+django-pyodbc-azure
+Pillow
+django-crispy-forms

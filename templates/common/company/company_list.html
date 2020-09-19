@@ -1,0 +1,17 @@
+{% extends 'E:/Python/Django/Rajan_mama/Project_2/mysite/templates/base.html' %}
+
+{% block content %}
+<a class="btn btn-sm btn-outline-success" href="{% url 'create_comapany' %}">Create Company</a>
+<div class="center-column">
+    <div class="item-row">
+        {% for company in companys %}
+        <ul>
+            <li> 
+                <a class="btn btn-sm btn-Link" href="{% url 'company_detail' company.id %}"> {{company}}</a>
+
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

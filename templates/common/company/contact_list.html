@@ -1,0 +1,16 @@
+{% extends 'E:/Python/Django/Rajan_mama/Project_2/mysite/templates/base.html' %}
+
+{% block content %}
+<a class="btn btn-sm btn-outline-success" href="{% url 'create_contact' %}">Create Contact</a>
+<div class="center-column">
+    <div class="item-row">
+        {% for contact in contacts %}
+        <ul>
+            <li> 
+                <span><a class="btn btn-sm btn-Link" href="{% url 'contact_detail' contact.id %}">{{contact}}</a></span>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

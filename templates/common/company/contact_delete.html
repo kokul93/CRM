@@ -1,0 +1,17 @@
+{% extends 'E:/Python/Django/Rajan_mama/Project_2/mysite/templates/base.html' %}
+
+
+{% block content %}
+    <div>
+        <legend class="border-bottom mb4">Delete Contact</legend>
+    </div>
+    <form method='POST'>
+        {% csrf_token %}
+        <div>
+            <h2> Are you sure, you want to delete the Contact "{{object.name}}" </h2>
+        </div>
+        <button type="submit" class="btn btn-outline-danger">Yes, Delete </button>
+        <a class="btn btn-sm btn-outline-secondary" href="{% url 'contact_detail' object.id %}">Cancel</a>
+    </form>
+
+{% endblock %}

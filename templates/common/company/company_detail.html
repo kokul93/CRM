@@ -1,0 +1,18 @@
+{% extends 'E:/Python/Django/Rajan_mama/Project_2/mysite/templates/base.html' %}
+
+{% block content %}
+
+<a class="btn btn-sm btn-outline-secondary" href="{% url 'company_update' company.id %}">Update</a> &nbsp; <a class="btn btn-sm btn-outline-danger" href="{% url 'company_delete' company.id %}">Detele</a>
+
+<div class="center-column">
+    <div class="item-row">
+    <h2>Name : {{company.name}}</h2>
+    <p>Email : {{company.email}}</p>
+    <p>Phone : {{company.phone}}</p>
+    <p>Address : {{company.address1}}<br> {{company.address2}}</p>
+    <p>City: {{company.city}}</p>
+    <p>Zip Code : {{company.zip_code}}</p>
+    <p>Created : {{company.created}}</p>
+    </div>
+</div>
+{% endblock %}
